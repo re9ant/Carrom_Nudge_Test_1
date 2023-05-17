@@ -21,7 +21,7 @@ public class CoinCollector : MonoBehaviour
         {
             whiteCoins++;
             Striker.instance.strikeAgain = true;
-            whiteCoinsText.text = "Player :\n" + whiteCoins;
+            whiteCoinsText.text = "Player :\nWhite coins :" + whiteCoins;
             if (whiteCoins >= 6)
             {
                 Striker.instance.gameObject.SetActive(false);
@@ -32,7 +32,7 @@ public class CoinCollector : MonoBehaviour
         {
             blackCoins++;
             Striker.instance.strikeAgain = true;
-            blackCoinsText.text = "Computer :\n" + blackCoins;
+            blackCoinsText.text = "Computer :\Black coins :" + blackCoins;
             if (blackCoins >= 6)
             {
                 Striker.instance.gameObject.SetActive(false);
