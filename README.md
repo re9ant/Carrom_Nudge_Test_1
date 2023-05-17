@@ -10,6 +10,9 @@
  and multiplied it with a variable named maxForce which is the maximum force 
  (example : 0.75(percentage of distance and max distance)  * 200(Max Force) = 175(Result Force))
  
+ I used line render component and assigned sprite as albedo value for the material I assigned for the component and set it as 2 index value 0 for bottom pivot and 
+ 1 for top pivot and made it a child of striker and set it's top pivot value accordinly the mouse drag
+ 
  Then I worked on the physics2d materials and adjusted some values of the striker's rigidbody and I started to work on the coin collectors I used triggers to
  detect coins color or team based of their tags "White" or "Black" or "Red" the coins disable when the go in the hole and the correspoding team gets 
  (Player or Computer) gets their score
@@ -18,7 +21,7 @@
  to the black coin position and i launched the striker with a force which is calculated by the distance and clamped the value from (min force)-2, 2(maxForce) 
  (could've used 1 but 2 felt better) 
  
- Later I worked on the UI and Added win / lose screen with a restart and quit application button
+ Later I worked on the UI and Added win / lose screen with a restart and quit application button, and fixed some bugs
  
 #End
  
