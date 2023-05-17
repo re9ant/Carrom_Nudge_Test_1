@@ -20,7 +20,10 @@ public class CoinCollector : MonoBehaviour
         if (collision.tag == "White")
         {
             whiteCoins++;
-            Striker.instance.strikeAgain = true;
+            if(Striker.instance.prevStrikePlayer)
+            {
+                Striker.instance.strikeAgain = true;
+            }
             whiteCoinsText.text = "Player :\nWhite coins :\n" + whiteCoins;
             if (whiteCoins >= 6)
             {
@@ -31,7 +34,10 @@ public class CoinCollector : MonoBehaviour
         else if (collision.tag == "Black")
         {
             blackCoins++;
-            Striker.instance.strikeAgain = true;
+            if (!Striker.instance.prevStrikePlayer)
+            {
+                Striker.instance.strikeAgain = true;
+            }
             blackCoinsText.text = "Computer :\nBlack coins :\n" + blackCoins;
             if (blackCoins >= 6)
             {

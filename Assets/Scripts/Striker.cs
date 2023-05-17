@@ -27,6 +27,7 @@ public class Striker : MonoBehaviour
     bool playerSide = true;
     bool positionSet = false;
     bool hasStriked = false;
+    public bool prevStrikePlayer = true;
 
     private void Awake()
     {
@@ -134,6 +135,7 @@ public class Striker : MonoBehaviour
         direction = modMousePos;
         rb.AddForce(direction * x * maxForce);
         hasStriked = true;
+        prevStrikePlayer = true;
         playerSide = false;
     }
     
@@ -142,6 +144,7 @@ public class Striker : MonoBehaviour
         helpingArrow.enabled = false;
         rb.AddForce(direction * force * maxForce);
         hasStriked = true;
+        prevStrikePlayer = false;
         playerSide = true;
     }
 
