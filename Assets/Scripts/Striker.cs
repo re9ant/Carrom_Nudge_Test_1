@@ -173,7 +173,7 @@ public class Striker : MonoBehaviour
                 break;
             }
         }
-        force = Mathf.Clamp(force, 0, 2);
+        force = Mathf.Clamp(force, -2, 2);
         yield return new WaitForSeconds(1f);
         ShootStriker(direction, force);
         shooting = false;
